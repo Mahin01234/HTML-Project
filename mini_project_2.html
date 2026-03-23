@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title> 
+</head>
+<body>
+    <h1><center>Feedback Form</center></h1>
+    <p>Please below the from filp.</p>
+
+    <form action="#" method="POST">
+        <!-- Full Name -->
+        <label>Full Name: </label><br>
+        <input type="text" name="name" placeholder="Enter your full name" required><br><br>
+
+        <!-- Email -->
+        <label>Email Address: </label><br>
+        <input type="email" name="email" placeholder="example@email.com" required><br><br>
+
+        <!-- ID -->
+        <label>ID: </label><br>
+        <input type="id" name="id" placeholder="your id" required><br><br>
+
+        <!-- Phone -->
+        <label>Phone Number: </label><br>
+        <input type="tel" name="phone" placeholder="+880 1XXXXXXXXX"><br><br>
+
+        <!-- Role -->
+        <label>I am a:</label><br>
+        <input type="radio" name="role" value="student" required> Student
+        <input type="radio" name="role" value="teacher"> Teacher
+
+        <br>
+        <br>
+
+        <!-- Department -->
+        <label>Department: </label><br>
+        <select name="department">
+            <option value="">Select your Department</option>
+            <option value="science">Science</option>
+            <option value="arts">Arts</option>
+            <option value="commerce">Commerce</option>
+        </select><br><br>
+
+        <!-- Rating -->
+        <label>How would you rate our institution?</label><br>
+        <input type="radio" name="rating" value="5" required>Excellent
+        <input type="radio" name="rating" value="4">Good
+        <input type="radio" name="rating" value="3">Average
+        <input type="radio" name="rating" value="2">Poor
+        <input type="radio" name="rating" value="1">Very Poor<br><br>
+
+        <!-- Feedback Type -->
+        <label>Feedback Type: </label><br>
+        <input type="checkbox" name="feedback_type" value="academic"> Academic
+        <input type="checkbox" name="feedback_type" value="faculty"> Faculty
+
+
+        <br><br> 
+
+        <!-- Message -->
+        <label>Your Feedback: </label><br>
+        <textarea name="message" rows="4" cols="50" placeholder="Please share your thoughts..." required></textarea><br><br>
+
+        
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+
+</body>
+</html>
