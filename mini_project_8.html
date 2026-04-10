@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Table Project | Student Results & Class Routine</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f1f5f9;
+      padding: 2rem 1.5rem;
+      color: #0f172a;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 2.2rem;
+      background: linear-gradient(135deg, #1e293b, #2d3a4b);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .page-header p {
+      color: #475569;
+      margin-top: 0.3rem;
+    }
+
+    /* card style for each table */
+    .table-card {
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2.5rem;
+      overflow-x: auto;
+      padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+      transition: all 0.2s;
+    }
+
+    .table-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 5px solid #3b82f6;
+      padding-left: 1rem;
+    }
+
+    .table-title span {
+      font-size: 1.5rem;
+    }
+
+    /* table styling */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .data-table th {
+      background-color: #1e293b;
+      color: white;
+      padding: 12px 12px;
+      font-weight: 600;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .data-table td {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 10px 12px;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .data-table tr:hover td {
+      background-color: #f8fafc;
+    }
+
+    /* specific for result table: grade styling */
+    .grade {
+      font-weight: 700;
+      display: inline-block;
+      padding: 0.2rem 0.7rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+    }
+
+    .grade-A {
+      background: #dcfce7;
+      color: #15803d;
+    }
+
+    .grade-B {
+      background: #fef9c3;
+      color: #854d0e;
+    }
+
+    .grade-Aplus {
+      background: #d9f99d;
+      color: #3f6212;
+    }
+
+    /* routine table specific */
+    .routine-table th, .routine-table td {
+      min-width: 100px;
+    }
+
+    .time-col {
+      background-color: #f1f5f9;
+      font-weight: 500;
+      color: #0c4a6e;
+    }
+
+    .subject {
+      font-weight: 500;
+      color: #1e3a8a;
+    }
+
+    /* responsive */
+    @media (max-width: 680px) {
+      body {
+        padding: 1rem;
+      }
+      .data-table th, .data-table td {
+        padding: 8px 6px;
+        font-size: 0.8rem;
+      }
+      .table-title {
+        font-size: 1.3rem;
+      }
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #5b6e8c;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="page-header">
+    <h1>📊 Basic Table Project</h1>
+    <p>Student Result Summary & Weekly Class Routine (Schedule)</p>
+  </div>
+
+  <!-- STUDENT RESULT TABLE -->
+  <div class="table-card">
+    <div class="table-title">
+      <span>📈</span> Student Result Table
+    </div>
+    <div style="overflow-x: auto;">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Mathematics</th>
+            <th>Physics</th>
+            <th>Computer Science</th>
+            <th>English</th>
+            <th>Total Marks</th>
+            <th>Percentage</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>101</td>
+            <td style="text-align:left; font-weight:500;">Olivia Chen</td>
+            <td>92</td>
+            <td>88</td>
+            <td>95</td>
+            <td>91</td>
+            <td>366</td>
+            <td>91.5%</td>
+            <td><span class="grade grade-A">A+</span></td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td style="text-align:left; font-weight:500;">Liam Rodriguez</td>
+            <td>78</td>
+            <td>82</td>
+            <td>88</td>
+            <td>79</td>
+            <td>327</td>
+            <td>81.75%</td>
+            <td><span class="grade grade-B">B+</span></td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td style="text-align:left; font-weight:500;">Zara Ahmed</td>
+            <td>95</td>
+            <td>93</td>
+            <td>97</td>
+            <td>94</td>
+            <td>379</td>
+            <td>94.75%</td>
+            <td><span class="grade grade-A">A+</span></td>
+          </tr>
+          <tr>
+            <td>104</td>
+            <td style="text-align:left; font-weight:500;">Ethan Park</td>
+            <td>81</td>
+            <td>76</td>
+            <td>84</td>
+            <td>80</td>
+            <td>321</td>
+            <td>80.25%</td>
+            <td><span class="grade grade-B">B</span></td>
+          </tr>
+          <tr>
+            <td>105</td>
+            <td style="text-align:left; font-weight:500;">Maya Kapoor</td>
+            <td>89</td>
+            <td>91</td>
+            <td>93</td>
+            <td>87</td>
+            <td>360</td>
+            <td>90.0%</td>
+            <td><span class="grade grade-A">A</span></td>
+          </tr>
+          <tr>
+            <td>106</td>
+            <td style="text-align:left; font-weight:500;">James Wilson</td>
+            <td>67</td>
+            <td>72</td>
+            <td>79</td>
+            <td>68</td>
+            <td>286</td>
+            <td>71.5%</td>
+            <td><span class="grade grade-B">C+</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font-size: 0.75rem; margin-top: 12px; color: #4b5563; text-align: right;">* Max marks per subject: 100 | Grade A+ ≥90%, A ≥80%, B+ ≥75%, B ≥70%</div>
+  </div>
+
+  <!-- ROUTINE / CLASS SCHEDULE TABLE -->
+  <div class="table-card">
+    <div class="table-title">
+      <span>📅</span> Weekly Class Routine (Schedule)
+    </div>
+    <div style="overflow-x: auto;">
+      <table class="data-table routine-table">
+        <thead>
+          <tr>
+            <th>Time / Day</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time-col">08:30 – 09:50</td>
+            <td class="subject">Mathematics</td>
+            <td class="subject">Physics</td>
+            <td class="subject">Computer Sci.</td>
+            <td class="subject">English</td>
+            <td rowspan="5" style="background: #fef9e6; vertical-align: middle;">📌 <br>Short Day<br> (Workshop / Lab)</td>
+          </tr>
+          <tr>
+            <td class="time-col">10:00 – 11:20</td>
+            <td class="subject">Physics</td>
+            <td class="subject">Mathematics</td>
+            <td class="subject">English</td>
+            <td class="subject">Computer Sci.</td>
+          </tr>
+          <tr>
+            <td class="time-col">11:30 – 12:50</td>
+            <td class="subject">English</td>
+            <td class="subject">Computer Sci.</td>
+            <td class="subject">Mathematics</td>
+            <td class="subject">Physics</td>
+          </tr>
+          <tr>
+            <td class="time-col">12:50 – 13:40</td>
+            <td colspan="4" style="background: #eef2ff; text-align: center; font-weight: 500;">🍱 LUNCH BREAK</td>
+          </tr>
+          <tr>
+            <td class="time-col">13:45 – 15:05</td>
+            <td class="subject">Lab (CS)</td>
+            <td class="subject">Tutorial / Math</td>
+            <td class="subject">Physics Practical</td>
+            <td class="subject">Library / Self study</td>
+          </tr>
+          <tr>
+            <td class="time-col">15:15 – 16:30</td>
+            <td>Sports / Club</td>
+            <td>Doubt clearing</td>
+            <td>Seminar</td>
+            <td>Mentorship</td>
+            <td style="background:#f1f5f9;">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top: 12px; font-size: 0.8rem; background: #f8fafc; padding: 8px 12px; border-radius: 20px; display: inline-block;">
+      ⏰ Note: Friday sessions end at 1:00 PM (lab/workshop), no regular afternoon classes.
+    </div>
+  </div>
+
+  <footer>
+    📋 Basic Table Project — clear overview of academic results and weekly timetable
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Simple CV / Resume | Alex Morgan</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #eef2f5;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+      line-height: 1.5;
+      padding: 2rem 1.5rem;
+      color: #1a2a3a;
+    }
+
+    /* simple card container */
+    .resume-card {
+      max-width: 880px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .resume-inner {
+      padding: 2rem 2rem 2.2rem;
+    }
+
+    /* header area */
+    .header {
+      margin-bottom: 2rem;
+      border-bottom: 3px solid #e6edf4;
+      padding-bottom: 1.2rem;
+    }
+
+    .name {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #1e3c4a, #2b5c6f);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 0.25rem;
+    }
+
+    .title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #4f6f8f;
+      background: #eef3fc;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      margin: 0.5rem 0 0.6rem 0;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: #3a5a78;
+      margin-top: 0.6rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* section style */
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #1a3e50;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-left: 4px solid #3f8db3;
+      padding-left: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-title span {
+      font-size: 1.35rem;
+    }
+
+    /* education & experience entries */
+    .entry {
+      margin-bottom: 1.5rem;
+    }
+
+    .entry-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.3rem;
+    }
+
+    .entry-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1f3e4c;
+    }
+
+    .entry-date {
+      font-size: 0.8rem;
+      background: #eef2f7;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      color: #2c6b8f;
+      font-weight: 500;
+    }
+
+    .entry-sub {
+      font-weight: 500;
+      color: #4d6a83;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .entry-desc {
+      color: #2c3f4f;
+      font-size: 0.92rem;
+      margin-top: 0.4rem;
+      padding-left: 0.2rem;
+    }
+
+    .entry-desc-list {
+      margin-top: 0.4rem;
+      padding-left: 1.2rem;
+      list-style-type: circle;
+      color: #2c3f4f;
+    }
+
+    .entry-desc-list li {
+      margin-bottom: 0.25rem;
+      font-size: 0.9rem;
+    }
+
+    /* skills ul/li section */
+    .skills-box {
+      background: #f9fdfe;
+      border-radius: 1.2rem;
+      padding: 0.8rem 1rem 1rem 1rem;
+      border: 1px solid #e2edf2;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    .skills-list li {
+      background: #ffffff;
+      border: 1px solid #cbdfea;
+      padding: 0.45rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1a4c64;
+      transition: all 0.2s;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    }
+
+    .skills-list li:hover {
+      background: #e7f0f7;
+      border-color: #9bbdd2;
+      transform: translateY(-1px);
+    }
+
+    hr {
+      margin: 1rem 0 0.5rem;
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, #cfe0ea, transparent);
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #7c99b0;
+      margin-top: 1.5rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid #eaf0f5;
+    }
+
+    @media (max-width: 600px) {
+      .resume-inner {
+        padding: 1.5rem;
+      }
+      .name {
+        font-size: 1.8rem;
+      }
+      .entry-header {
+        flex-direction: column;
+        gap: 6px;
+      }
+      .section-title {
+        font-size: 1.25rem;
+      }
+      .contact-row {
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="resume-card">
+  <div class="resume-inner">
+    <!-- header with name & contact -->
+    <div class="header">
+      <div class="name">Mahin</div>
+      <div class="title">Full‑Stack Developer & UI Engineer</div>
+      <div class="contact-row">
+        <div class="contact-item">📧 alex.morgan@cv.me</div>
+        <div class="contact-item">📞 +1 (415) 867-5309</div>
+        <div class="contact-item">📍 Seattle, WA</div>
+        <div class="contact-item">🌐 github.com/alexmorgan</div>
+      </div>
+    </div>
+
+    <!-- EDUCATION section -->
+    <div class="section">
+      <div class="section-title">
+        <span>🎓</span> Education
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">M.Sc. in Computer Science</div>
+          <div class="entry-date">2021 – 2023</div>
+        </div>
+        <div class="entry-sub">Un | GPA 3.9/4.0</div>
+        <div class="entry-desc">Focus on web technologies, distributed systems, and human-computer interaction. Thesis on real‑time collaborative interfaces.</div>
+      </div>
+      <div class="entry">
+        <!-- <div class="entry-header">
+          <div class="entry-title">B.E. Software Engineering</div>
+          <div class="entry-date">2017 – 2021</div>
+        </div> -->
+        <div class="entry-sub">California State University, Fullerton | cum laude</div>
+        <div class="entry-desc">Relevant coursework: Data Structures, Web Development, Database Design, UI/UX fundamentals.</div>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE section -->
+    <!-- <div class="section">
+      <div class="section-title">
+        <span>💼</span> Experience
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Senior Frontend Engineer</div>
+          <div class="entry-date">2023 – Present</div>
+        </div>
+        <div class="entry-sub">Nexify Digital · Seattle (Hybrid)</div>
+        <ul class="entry-desc-list">
+          <li>Lead development of design system and component library used by 5+ product teams, improving consistency by 40%.</li>
+          <li>Optimize React applications with code splitting and memoization, reducing load time by 32%.</li>
+          <li>Mentor junior developers and conduct code reviews, ensuring high-quality standards and accessibility.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Full Stack Developer</div>
+          <div class="entry-date">2021 – 2023</div>
+        </div>
+        <div class="entry-sub">CodeCraft Studio · Remote</div>
+        <ul class="entry-desc-list">
+          <li>Built responsive web applications with React, Node.js, and PostgreSQL, serving 20k+ monthly users.</li>
+          <li>Implemented RESTful APIs and integrated third‑party services (Stripe, Auth0).</li>
+          <li>Collaborated with designers to translate Figma mockups into pixel‑perfect, cross‑browser interfaces.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">Junior Web Developer (Intern)</div>
+          <div class="entry-date">2020 – 2021</div>
+        </div>
+        <div class="entry-sub">Brightworks Agency · Los Angeles, CA</div>
+        <ul class="entry-desc-list">
+          <li>Maintained client websites, performed debugging and performance audits.</li>
+          <li>Assisted in migrating legacy CSS to modern Flexbox/Grid layouts.</li>
+          <li>Created reusable HTML email templates for marketing campaigns.</li>
+        </ul>
+      </div>
+    </div> -->
+
+    <!-- SKILLS section with explicit ul/li -->
+    <div class="section">
+      <div class="section-title">
+        <span>⚙️</span> Skills & Tools
+      </div>
+      <div class="skills-box">
+        <ul class="skills-list">
+          <li>JavaScript (ES6+)</li>
+          <li>TypeScript</li>
+          <li>React / Next.js</li>
+          <li>Vue.js</li>
+          <li>Node.js / Express</li>
+          <li>Python / Flask</li>
+          <li>HTML5 & CSS3</li>
+          <li>Tailwind / SCSS</li>
+          <li>Git & GitHub Actions</li>
+          <li>Figma to code</li>
+          <li>RESTful APIs</li>
+          <li>SQL / MongoDB</li>
+          <li>Jest / Testing Library</li>
+          <li>Responsive design</li>
+        </ul>
+        <hr>
+        <div style="font-size:0.8rem; color:#4f6f8f; margin-top: 0.7rem;">⭐ Languages: English (fluent), Spanish (professional working proficiency)</div>
+      </div>
+    </div>
+    
+    <div class="footer-note">
+      📄 Open for freelance & full‑time opportunities — let's connect!
+    </div>
+  </div>
+</div>
+</body>
+</html>

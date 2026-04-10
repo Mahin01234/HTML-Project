@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form · HTML Only</title>
+  <!-- No CSS or JavaScript — pure semantic HTML -->
+</head>
+<body>
+
+  <h1>📋 Registration Form</h1>
+  <p>Please fill out the form below. This form is built entirely with HTML — no CSS or JavaScript.</p>
+
+  <!-- Form: method="post", action="#" (demo) -->
+  <form action="#" method="post">
+
+    <!-- 1. Name -->
+    <label for="fullname">👤 Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+    <br><br>
+
+    <!-- 2. Email -->
+    <label for="email">📧 Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+    <br><br>
+
+    <!-- 3. Password -->
+    <label for="password">🔒 Password:</label><br>
+    <input type="password" id="password" name="password" placeholder="At least 8 characters" minlength="8" required>
+    <br><br>
+
+    <!-- 4. Radio buttons (example: account type) -->
+    <fieldset>
+      <legend>💳 Account Type (Radio Button):</legend>
+      
+      <input type="radio" id="personal" name="account_type" value="personal" checked>
+      <label for="personal">Personal</label><br>
+      
+      <input type="radio" id="business" name="account_type" value="business">
+      <label for="business">Business</label><br>
+      
+      <input type="radio" id="student" name="account_type" value="student">
+      <label for="student">Student</label>
+    </fieldset>
+    <br>
+
+    <!-- 5. Checkbox (terms and conditions) -->
+    <input type="checkbox" id="terms" name="terms" value="agree" required>
+    <label for="terms">✅ I have read and agree to the terms and conditions.</label>
+    <br><br>
+
+    <!-- 6. Submit button -->
+    <input type="submit" value="📨 Submit Registration">
+  </form>
+
+  <hr>
+  <footer>
+    <small>✅ This form uses only HTML elements — exactly as specified.</small>
+  </footer>
+
+</body>
+</html>

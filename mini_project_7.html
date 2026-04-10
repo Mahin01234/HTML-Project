@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>My Favorite Things | Movies, Books & Food</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #fff7f0 0%, #faeecd 100%);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+      padding: 2rem 1.5rem;
+      color: #2e241f;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #c2571a, #9b3f02);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      color: #6b4c3b;
+      max-width: 550px;
+      margin: 0 auto;
+      border-bottom: 2px dashed #f0cfaa;
+      display: inline-block;
+      padding-bottom: 0.4rem;
+    }
+
+    .category {
+      margin-bottom: 3rem;
+    }
+
+    .category-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.3rem;
+      padding-left: 0.8rem;
+      border-left: 6px solid #e27c3e;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .category-title span {
+      font-size: 2rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .favorite-card {
+      background: #ffffffdd;
+      backdrop-filter: blur(2px);
+      background: #fffef7;
+      border-radius: 1.8rem;
+      overflow: hidden;
+      box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 1px solid #ffe3bf;
+    }
+
+    .favorite-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 22px 35px -12px rgba(0, 0, 0, 0.2);
+      border-color: #f7bc7a;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .favorite-card:hover .card-img {
+      transform: scale(1.02);
+    }
+
+    .card-content {
+      padding: 1.3rem 1.4rem 1.6rem;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #402e24;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.2px;
+    }
+
+    .card-description {
+      font-size: 0.95rem;
+      line-height: 1.45;
+      color: #5b4335;
+      margin-top: 0.5rem;
+    }
+
+    .type-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      background: #f7e3cf;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      color: #b4511a;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 1.2rem;
+      }
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+      .category-title {
+        font-size: 1.6rem;
+      }
+      .card-grid {
+        gap: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card-title {
+        font-size: 1.3rem;
+      }
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #a57756;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="page-header">
+    <h1>✨ My Favorite Things ✨</h1>
+    <p>Movies that inspire · Books that linger · Food that comforts</p>
+  </div>
+
+  <!-- MOVIES SECTION -->
+  <div class="category">
+    <div class="category-title">
+      <span>🎬</span> Favorite Movies
+    </div>
+    <div class="card-grid">
+      <div class="favorite-card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&h=400&fit=crop" alt="Cinema clapperboard and film reel" loading="lazy">
+        <div class="card-content">
+          <div class="type-badge">🎞️ Film</div>
+          <div class="card-title">Inception (2010)</div>
+          <div class="card-description">A mind-bending heist thriller by Christopher Nolan. Dream layers, spinning tops, and an emotional core that stays with you long after the credits.</div>
+        </div>
+      </div>
+      <div class="favorite-card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&h=400&fit=crop" alt="Old film projector" loading="lazy">
+        <div class="card-content">
+          <div class="type-badge">🍃 Studio Ghibli</div>
+          <div class="card-title">Spirited Away</div>
+          <div class="card-description">Hayao Miyazaki’s masterpiece about courage, identity, and the spirit world. Stunning animation, unforgettable characters — a magical journey.</div>
+        </div>
+      </div>
+      <div class="favorite-card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=600&h=400&fit=crop" alt="Retro cinema ticket" loading="lazy">
+        <div class="card-content">
+          <div class="type-badge">⭐ Sci‑Fi Classic</div>
+          <div class="card-title">Interstellar</div>
+          <div class="card-description">A breathtaking voyage through wormholes and time dilation. Hans Zimmer’s score + emotional father-daughter story make it an epic about love and survival.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKS SECTION -->
+  <div class="category">
+    <div class="category-title">
+      <span>📚</span> Favorite Books
+    </div>
+    <div class="card-grid">
+      <div class="favorite-card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop" alt="Stack of vintage books" loading="lazy">
+        <div class="card-content">
+          <div class="type-badge">📖 Fantasy</div>
+          <div class="card-title">The Name of the Wind</div>
+          <div class="card-description">Patrick Rothfuss weaves lyrical prose and deep worldbuilding. Follow Kvothe through music, magic, and mystery — a slow-burn masterpiece.</div>
+        </div>
+      </div>
+      <div class="favorite-card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&h=400&fit=crop" alt="Open antique book" loading="lazy">
+        <div class="card-content">
+          <div class="type-badge">🏆 Pulitzer Winner</div>
+          <div class="card-title">The Overstory</div>
+          <div class="card-description">Richard Powers connects nine strangers through their love for trees. An eco-epic that changes how you see forests and human interconnectedness.</div>
+        </div>
+      </div>
+      <div class="favorite-card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&h=400&fit=crop" alt="Colorful bookshelf" loading="lazy">
+        <div class="card-content">
+          <div class="type-badge">🐉 Sci‑Fi</div>
+          <div class="card-title">Dune</div>
+          <div class="card-description">Frank Herbert’s desert epic of politics, religion, and ecology. Arrakis, spice, and the Fremen — a dense, brilliant saga that inspired generations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOD SECTION -->
+  <div class="category">
+    <div class="category-title">
+      <span>🍽️</span> Favorite Foods
+    </div>
+    <div class="card-grid">
+      <div class="favorite-card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop" alt="Margherita pizza" loading="lazy">
+        <div class="card-content">
+          <div class="type-badge">🍕 Italian Classic</div>
+          <div class="card-title">Margherita Pizza</div>
+          <div class="card-description">Simple perfection: San Marzano tomatoes, fresh mozzarella, basil, and a thin crispy crust. Every bite feels like a trip to Naples.</div>
+        </div>
+      </div>
+      <div class="favorite-card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&h=400&fit=crop" alt="Fresh sushi platter" loading="lazy">
+        <div class="card-content">
+          <div class="type-badge">🍣 Japanese Delicacy</div>
+          <div class="card-title">Sushi (Nigiri & Rolls)</div>
+          <div class="card-description">Fresh fish, perfectly seasoned rice, and a touch of wasabi. From buttery salmon to crunchy tempura rolls — light and indulgent.</div>
+        </div>
+      </div>
+      <div class="favorite-card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&h=400&fit=crop" alt="Chocolate lava cake" loading="lazy">
+        <div class="card-content">
+          <div class="type-badge">🍫 Dessert Heaven</div>
+          <div class="card-title">Chocolate Lava Cake</div>
+          <div class="card-description">Warm, gooey dark chocolate center that flows like molten gold. Served with vanilla ice cream — pure bliss.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>🌟 Things that spark joy — curated with love 🌟</footer>
+</div>
+</body>
+</html>
