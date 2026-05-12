@@ -24,9 +24,10 @@ A collection of **11 mini web projects**, each built using only **pure HTML**. N
 | 8 | **Basic Table Project** | A data‑driven page with a student result summary (marksheet) and a weekly class routine (timetable). | Complex tables (`<table>`, `<tr>`, `<th>`, `<td>`), row/col spans | — |
 | 9 | **Registration Form** | A user registration form with name, email, password, account type (radio), and terms agreement. | Text inputs, password field, radio buttons, checkbox, submit button | — |
 | 10 | **Daily Chronicle (News)** | A news‑style website with top stories, sports, tech, and other sections. Uses semantic grouping for readability. | Headings, sections, image placeholders, categories, lists | — |
-| 11 | **Daily Chronicle · HTML5** | A learning‑focused page that showcases modern HTML5 features: semantic elements, forms, audio/video, SVG, and MathML. | Semantic HTML5 (`<article>`, `<aside>`, `<footer>`), `<details>`/`<summary>`, `<meter>`, audio (`<audio>`), video (`<video>`), SVG, MathML, modern form controls | — |
+| 11 | **Daily Chronicle** | A learning‑focused page that showcases modern HTML5 features: semantic elements, forms, audio/video, SVG, and MathML. | Semantic HTML5 (`<article>`, `<aside>`, `<footer>`), `<details>`/`<summary>`, `<meter>`, audio (`<audio>`), video (`<video>`), SVG, MathML, modern form controls | — |
+| 12 | **Instagram Login Clone (Dark Mode)** | A clear and simple description of the HTML elements featured in your Instagram login page. | The page includes div, form, input, button, a, svg, style, script, meta, and title elements to build a functional login UI demo. | — |
 
-> **Note:** Projects 1, 2, 3, and 4 correspond to the links you shared. The others are additional practice exercises exploring different HTML capabilities.
+
 
 ---
 
